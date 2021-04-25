@@ -1,0 +1,15 @@
+while True:
+	try:
+		year = int(input("Enter year to check if it's a leap year: "))
+		break
+	except ValueError:
+		print("Oops!  That was not a valid number.  Try again...")
+
+if year % 4:
+	if not year % 100:
+		print(year, " is a leap year!")
+
+if(year % 400 == 0):
+        print(year, " is a leap year!")
+else: 
+	print(year, " is not a leap year.")
