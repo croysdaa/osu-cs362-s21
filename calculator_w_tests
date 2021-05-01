@@ -1,0 +1,44 @@
+import unittest
+
+print("Would you like to add, subtract, multiply or divide?")
+answer = 'a'
+while answer != 'quit':
+    answer = input("Enter 'a', 's', 'm', 'd' or 'quit': ")
+    if answer != 'quit':
+        first = input("Enter first number: ")
+        sec = input("Enter second number: ")
+    if answer == 'quit':
+        print("Goodbye")
+    elif answer == 'a':
+        sum1 = float(first) + float(sec)
+        class TestSum(unittest.TestCase):
+            def test_sum(self):
+                test_sum = 3.0 + 2.0
+                self.assertEqual(5,test_sum,"should be 5")
+        print(sum1)
+    elif answer == 's':
+        difference = float(first) - float(sec)
+        class TestDiff(unittest.TestCase):
+            def test_diff(self):
+                test_diff = 3.0 - 2.0
+                self.assertEqual(1,test_diff,"should be 1")
+        print(difference)
+    elif answer == 'm':
+        product = float(first) * float(sec)
+        class TestProduct(unittest.TestCase):
+            def test_product(self):
+                test_product = 3.0 * 2.0
+                self.assertEqual(6,test_product,"should be 6")
+        print(product)
+    elif answer == 'd':
+        quotient = float(first) / float(sec)
+        class TestQuotient(unittest.TestCase):
+            def test_quotient(self):
+                test_quotient = 3.0 / 2.0
+                self.assertEqual(1.5,test_quotient,"should be 1.5")
+        print(quotient)
+    else:
+        print("Try again")
+        
+if __name__ == '__main__':
+    unittest.main()
