@@ -1,1 +1,3 @@
-
+side = input("What would you like the length of the side of your cube to be: ")
+volume = side*side*side
+print("The volume of your cube is " volume)
