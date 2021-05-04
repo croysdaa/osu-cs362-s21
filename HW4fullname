@@ -1,4 +1,9 @@
+import unittest
+
 first = input("Enter your first name: ")
 last = input("Enter your last name: ")
 full = first + last
 print("Your full name is '%s'" %full)
+
+if __name__ == '__main__':
+unittest.main(verbosity=2)
