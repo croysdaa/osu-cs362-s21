@@ -1,15 +1,5 @@
 import unittest
 
-class TestCase(unittest.TestCase):
-  def test1(self):
-    self.assertEqual(sum(2, 1),3)
-  def test2(self):
-    self.assertEqual(sum(-1, 2), 1)
-  def test3(self):
-    self.assertEqual(sum(-1, -1),-2)
-  def test4(self):
-    self.assertEqual(sum(1.5, 5), 6.5)
-
 count = 0
 num = 0
 sum = 0
@@ -24,5 +14,13 @@ average = sum/count
 print("The average of the numbers you entered is ")
 print('%f' %average)
 
+class TestCase(unittest.TestCase):
+  def test1(self):
+    self.assertGreater(count,0)
+  def test2(self):
+    self.assertGreater(sum, 0)
+  def test3(self):
+    self.assertEqual(sum/count,average)
+  
 if __name__ == '__main__':
 unittest.main(verbosity=2)
