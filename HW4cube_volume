@@ -1,6 +1,6 @@
 import unittest
 
-side = input("What would you like the length of the side of your cube to be: ")
+side = input("What would you like the length of the side of your cube to be (real numbers only): ")
 volume = side*side*side
 print("The volume of your cube is " volume)
 
