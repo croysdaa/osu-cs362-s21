@@ -1,19 +1,18 @@
 import unittest
-
-class TestCase(unittest.TestCase):
-  def test1(self):
-    self.assertEqual(sum(2, 1),3)
-  def test2(self):
-    self.assertEqual(sum(-1, 2), 1)
-  def test3(self):
-    self.assertEqual(sum(-1, -1),-2)
-  def test4(self):
-    self.assertEqual(sum(1.5, 5), 6.5)
+import six
 
 first = input("Enter your first name: ")
 last = input("Enter your last name: ")
 full = first + last
 print("Your full name is '%s'" %full)
 
+class TestCase(unittest.TestCase):
+  def test1(self):
+    self.assertIsInstance(first,six.string_types)
+  def test2(self):
+    self.assertIsInstance(last,six.string_types)
+  def test3(self):
+    self.assertIsInstance(full,six.string_types)
+    
 if __name__ == '__main__':
 unittest.main(verbosity=2)
