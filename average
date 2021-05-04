@@ -1,0 +1,13 @@
+count = 0
+num = 0
+sum = 0
+print ("This program finds the average of the numbers you enter")
+while True:
+  num = input("Enter a number or 'quit': ")
+  if (num == 'quit'):
+    break
+  sum = sum + int(num)
+  count = count + 1
+average = sum/count
+print("The average of the numbers you entered is ")
+print('%f' %average)
