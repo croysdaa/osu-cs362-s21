@@ -1,0 +1,27 @@
+input_array = []
+
+num_elements = int(input("How many elements will be in the array? "))
+
+target_sum = int(input("What will the target sum be?"))
+
+print("Enter the numbers for the array")
+
+for i in range(num_elements):
+    element = int(input())
+    input_array.append(element)
+
+output_array = []
+
+minusone = num_elements-1
+
+for i in range(0, minusone):
+    for j in range(i+1, num_elements):
+        if (input_array[i] + input_array[j] == target_sum):
+            output_array.append(input_array[i])
+            output_array.append(input_array[j])
+            break
+    else:
+        continue
+    break
+
+print(output_array)
