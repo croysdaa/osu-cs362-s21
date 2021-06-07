@@ -1,0 +1,11 @@
+def reverse_sentence(string):
+    input_str = input("Enter a multi word string: ")
+    split_str = input_str.split()
+    output_str = ''
+
+    for i in reversed(split_str):
+        output_str += i
+        output_str += ' '
+    output_str = output_str[:-1]
+    ''.join(output_str)
+    return(output_str)
